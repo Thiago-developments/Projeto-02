@@ -12,6 +12,7 @@
         <title>Tabela_price</title>
     </head>
     <body>
+        <%@include file="WEB-INF/jspf/Navegar.jspf" %>
         <h1>Tabela price</h1>
     </body>
 </html>

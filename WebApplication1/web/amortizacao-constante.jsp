@@ -12,6 +12,7 @@
         <title>Amortização_constante</title>
     </head>
     <body>
+        <%@include file="WEB-INF/jspf/Navegar.jspf" %>
         <h1>Amortização constante</h1>
     <form>
             <h1>Digite o valor:</h1>

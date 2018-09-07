@@ -12,6 +12,7 @@
         <title>Amortização_americana</title>
     </head>
     <body>
+        <%@include file="WEB-INF/jspf/Navegar.jspf" %>
         <h1>Amortização americana</h1>
     </body>
 </html>

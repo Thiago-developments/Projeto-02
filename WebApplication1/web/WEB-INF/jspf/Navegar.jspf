@@ -1,3 +1,10 @@
 <%-- any content can be specified here e.g.: --%>
 <%@ page pageEncoding="UTF-8" %>
-<h2>Hello World!</h2>
+<form method="get">
+    <a style=\"color:black;\" href="home.jsp">Home</a>||
+    <a style=\"color:black;\" href="amortizacao-americana.jsp">Amortização americana</a>||
+    <a style=\"color:black;\" href="amortizacao-constante.jsp">Amortização constante</a>||
+    <a style=\"color:black;\" href="tabela-price.jsp">Tabela price</a>
+    
+</form>
+<hr/>
