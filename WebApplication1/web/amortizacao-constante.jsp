@@ -25,6 +25,13 @@
                         <th>Amortização Constante</th>
                     </tr>
                 </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <p>Sistema de Amortização Constante (SAC) é uma forma de amortização de um empréstimo por prestações que incluem os juros, amortizando assim partes iguais do valor total do empréstimo.</p>
+                        </td>
+                    </tr>
+                </tbody>
             </table>
 
             <form method="get">
@@ -63,7 +70,7 @@
                 double juros = (porce*valor);                
                 double saldo = valor;
                 double parcela = amort +(porce*valor);
-                DecimalFormat df = new DecimalFormat("0.##");
+                DecimalFormat df = new DecimalFormat("0.00");
                 saldo = saldo-amort;
                 double somaamo=0,somajur=0,somapar=0;
             %>

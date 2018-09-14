@@ -5,6 +5,8 @@
 --%>
 
 <%@page import="java.text.DecimalFormat"%>
+<%@page import="java.util.Locale"%>
+<%@page import="java.util.Currency"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <%@include file="WEB-INF/jspf/top.jspf" %>
@@ -25,6 +27,15 @@
                         <th>Amortização Americana</th>
                     </tr>
                 </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <p>O Sistema de Amortização Americano é uma forma de pagamento de empréstimos que se caracteriza pelo pagamento apenas dos juros da dívida,deixando o valor da dívida constante, que pode ser paga em apenas um único pagamento.</p>
+                            <p>Esse sistema de amortização tem a vantagem em relação ao sistema de pagamento único, pois nele não há incidência de juros sobre juros. Os juros sempre incidem sobre o valor original da dívida. Com isso o devedor pode quitar sua dívida quando quiser.</p>
+                            <p>Tem como desvantagem que o pagamento de juros pode, em tese, ser perpétuo mesmo quando já se pagou o equivalente à dívida em si. Para isso, basta que o número de prestações exceda 100% quando da soma dos juros simples.</p>
+                        </td>
+                    </tr>
+                </tbody>
             </table>
 
             <form method="get">
@@ -63,9 +74,13 @@
                 double juros = (porce*valor);                
                 double saldo = valor;
                 double parcela = amort +(porce*valor);
-                DecimalFormat df = new DecimalFormat("0.##");
+                DecimalFormat df = new DecimalFormat("0.00");
                 saldo = saldo-amort;
                 double somaamo=0,somajur=0,somapar=0;
+
+                /*Locale meuLocal = new Locale( "pt", "BR" ); 
+                DecimalFormat df = DecimalFormat.getCurrencyInstance(meuLocal);*/
+
             %>
             <br>
             <table class="table content-right">
@@ -83,7 +98,7 @@
                         <td>1</td>
                         <td><%= df.format(parcela) %></td>
                         <td><%= df.format(amort) %></td>
-                        <td><%= df.format(juros) %>%</td>
+                        <td><%= df.format(juros) %></td>
                         <td><%= df.format(saldo) %></td>
                         <% 
                         somapar += parcela;
@@ -101,7 +116,7 @@
                         <td><%= l %></td>
                         <td><%= df.format(parcela) %></td>
                         <td><%= df.format(amort) %></td>
-                        <td><%= df.format(juros) %>%</td>
+                        <td><%= df.format(juros) %></td>
                         <td><%= df.format(saldo) %></td>
                         <%
                         somapar += parcela;
@@ -116,7 +131,7 @@
                         <td>TOTAL</td>
                         <td><%= df.format(somapar) %></td>
                         <td><%= df.format(somaamo) %></td>
-                        <td><%= df.format(somajur) %>%</td>
+                        <td><%= df.format(somajur) %></td>
                         <td></td>
                     </tr>
                 </tfoot>

@@ -24,6 +24,15 @@
                         <th>Tabela Price</th>
                     </tr>
                 </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <p>Tabela Price, também chamado de sistema francês de amortização, é um método usado em amortização de empréstimo cuja principal característica é apresentar prestações (ou parcelas) iguais. O método foi apresentado em 1771 por Richard Price em sua obra "Observações sobre Pagamentos Remissivos"</p>
+                            <p>O método foi idealizado pelo seu autor para pensões e aposentadorias. No entanto, foi a partir da 2ª revolução industrial que sua metodologia de cálculo foi aproveitada para cálculos de amortização de empréstimo.</p>
+                            <p>A tabela Price usa o regime de juros compostos para calcular o valor das parcelas de um empréstimo e, dessa parcela, há uma proporção relativa ao pagamento de juros e amortização do valor emprestado.</p>
+                        </td>
+                    </tr>
+                </tbody>
             </table>
         
             <form method="get">
@@ -54,10 +63,9 @@
 
             <%if (request.getParameter("botao")!= null){
                 double valor = Double.parseDouble(request.getParameter("valor"));
-                /*double entrada = Double.parseDouble(request.getParameter("entrada"));*/
-                double saldodevedor = valor ;
                 double parcelas = Double.parseDouble(request.getParameter("prestacoes"));
                 double juros = Double.parseDouble(request.getParameter("juros"));
+                double saldodevedor = valor ;
                 juros = juros/100 ;
                 double valordojuros ;double amortizacao;
                 double valordaparcela = valor*(((Math.pow(1+juros, parcelas))*juros)/((Math.pow(1+juros, parcelas))-1));
