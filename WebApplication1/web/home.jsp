@@ -1,25 +1,51 @@
-<%-- 
-    Document   : home
-    Created on : 01/09/2018, 23:40:32
-    Author     : thiag
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html lang ="pt-br">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Projeto 02</title>
-    </head>
-    <body style=\"background:lightgreen;text-align:center;color:black;font-family:verdana;\">
-        
-        <h1 style=\"color:black;\">Projeto 02</h1>
-        <h3 style=\"color:black;\"><u>Integrantes:</u></h3>
-        <h3 style=\"color:black;\">Thiago Sousa</h3>
-        <h3 style =\"color:black;\">Eduardo Ribas</h3>
-        <h3 style =\"color:black;\">Diego Forganes</h3>
-        <h4 style =\"color:black;\">A aplicação é capaz de calcular:</h4>
-        <%@include file="WEB-INF/jspf/Navegar.jspf" %><br>
-        
-    </body>
-</html>
+
+<%@include file="WEB-INF/jspf/top.jspf" %>
+<%@include file="WEB-INF/jspf/menu.jspf" %>
+
+<div class="col-md-8">
+    <div class="panel panel-default">
+        <div class="panel-heading font-weight-bold">
+            <a href="home.jsp">Home</a>
+        </div>
+
+        <div class="panel-body">
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Sistema de Cálculo de Amortizações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Este sistema calcula amortizações do tipo Americana, Constante e Tabela Price.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Integrantes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>&bull; Thiago Sousa</td>
+                    </tr>
+                    <tr>
+                        <td>&bull; Eduardo Ribas</td>
+                    </tr>
+                    <tr>
+                        <td>&bull; Diego Forganes</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+
+<%@include file="WEB-INF/jspf/bottom.jspf" %>
+

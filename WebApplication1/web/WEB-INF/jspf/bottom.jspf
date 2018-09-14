@@ -1,0 +1,14 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+                </div>
+
+                <div class="footer">
+                    <br>
+                    <p>Desenvolvido por: Thiago Sousa, Eduardo Ribas e Diego Forganes</p>
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>
+
